@@ -1,0 +1,1 @@
+export default { images:{ remotePatterns:[{protocol:'https',hostname:'opengraph.githubassets.com'},{protocol:'https',hostname:'images.unsplash.com'},{protocol:'https',hostname:'avatars.githubusercontent.com'},{protocol:'https',hostname:'raw.githubusercontent.com'}]}, experimental:{ optimizePackageImports:['framer-motion','lucide-react'] } }

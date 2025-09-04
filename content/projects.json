@@ -1,0 +1,64 @@
+[
+  {
+    "slug": "healthedgeai",
+    "title": "HealthEdgeAI \u2014 Intelligent Health Insights",
+    "blurb": "End-to-end data pipeline and ML service that surfaces actionable health insights.",
+    "metrics": [
+      "TBD: accuracy / latency",
+      "TBD: users / adoption"
+    ],
+    "stack": [
+      "Python",
+      "Pandas",
+      "scikit-learn",
+      "FastAPI",
+      "PostgreSQL",
+      "Docker",
+      "GCP"
+    ],
+    "cover": "/og.png",
+    "category": "AI",
+    "links": {
+      "repo": "https://github.com/EAZY647",
+      "live": "#"
+    },
+    "problem": "Health data from multiple sources was siloed; manual analysis slowed decision-making.",
+    "approach": "Built a robust ingestion pipeline (batch + incremental) with validation; trained baseline risk models; served via FastAPI with containerized deployment.",
+    "result": "Delivered an MVP with reproducible experiments and clear data contracts; ready to iterate with real feedback.",
+    "lessons": [
+      "Automate validation early",
+      "Version features and models",
+      "CI for data and code"
+    ]
+  },
+  {
+    "slug": "realtime-customer-analytics",
+    "title": "Real-time Customer Analytics",
+    "blurb": "Event streaming pipelines with Kafka + Flink; sub-second dashboards.",
+    "metrics": [
+      "-45% data latency",
+      "+18% retention"
+    ],
+    "stack": [
+      "Kafka",
+      "Flink",
+      "AWS Lambda",
+      "dbt",
+      "BigQuery"
+    ],
+    "cover": "/og.png",
+    "category": "Web",
+    "links": {
+      "repo": "https://github.com/EAZY647",
+      "live": "#"
+    },
+    "problem": "Fragmented analytics with batch delays made decisions slow and reactive.",
+    "approach": "Designed a scalable pipeline into BigQuery via dbt models; implemented CDC and backfills.",
+    "result": "Cut data latency by 45%, enabling near real-time experiments and alerts.",
+    "lessons": [
+      "Idempotency first",
+      "Alert on lag/backpressure",
+      "Treat schemas as contracts"
+    ]
+  }
+]

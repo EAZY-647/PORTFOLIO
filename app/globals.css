@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --radius: 16px; }
+html { scroll-behavior: smooth }
+body {
+  @apply bg-[hsl(240,14%,7%)] text-[hsl(240,8%,96%)] antialiased font-body;
+  background-image:
+    radial-gradient(1200px 1200px at 80% -10%, rgba(124,92,255,.20), transparent 60%),
+    radial-gradient(900px 900px at -10% 20%, rgba(0,224,255,.18), transparent 60%);
+  min-height: 100dvh;
+}
+body::before {
+  content: ""; position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='.04'/%3E%3C/svg%3E");
+  opacity: .6; pointer-events: none; mix-blend-mode: overlay;
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto } }
+:focus-visible { outline: 2px solid hsl(260 100% 66%); outline-offset: 2px }
+.skip-link { position: absolute; left: -999px; top: 0; padding: .5rem .75rem; background: #111827; color: white; z-index: 50; }
+.skip-link:focus { left: .5rem; top: .5rem; border-radius: .5rem }
+.container{ @apply max-w-[1120px] mx-auto px-5 }
+.card { @apply rounded-2xl bg-[hsl(240,14%,9%/.7)] border border-[hsl(240,10%,30%/.3)] shadow-soft }
+.btn { @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl border border-[hsl(240,10%,30%/.3)] text-sm }
+.btn-primary { background: linear-gradient(135deg, hsl(260 100% 66%), hsl(192 100% 50%)); color: white; border: 0 }
+.badge { @apply text-[12px] px-2.5 py-1 rounded-full border border-[hsl(240,10%,30%/.3)] }
